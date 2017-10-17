@@ -1,11 +1,10 @@
 package flsl;
 
 public class Faculty extends Employee{
-	String rank;
+	String rank;	
 	
 	
-	
-	public Faculty(String name, String id, String rank){
+	public Faculty(String id, String name, String rank){
 		super(name,id);
 		this.rank = rank;
 	}	
@@ -21,6 +20,11 @@ public class Faculty extends Employee{
 	 */
 	public void setRank(String rank) {
 		this.rank = rank;
+	}
+	@Override
+	public boolean canEditSubjects() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 

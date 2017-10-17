@@ -5,9 +5,10 @@ import java.util.ArrayList;
 /*
  * loads are employee's way of putting different load for an employee
  */
-public class Employee extends Person{
+public abstract class Employee extends Person{
 	String id;	
 	ArrayList<Load> loads;
+	
 	
 	/**
 	 * @return the loads
@@ -33,11 +34,14 @@ public class Employee extends Person{
 	public Employee(String name, String id){
 		super(name);
 		this.id = id;
+		this.loads = new ArrayList<Load>(); 
 		
 	}
 	
 	public void addLoad(Load load){
 		this.loads.add(load);
 	}
+	
+	public abstract boolean canEditSubjects();
 
 }

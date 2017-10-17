@@ -5,6 +5,12 @@ import java.util.ArrayList;
 public class TeachingLoad extends Load{
 	
 	ArrayList<Subject> subjects;
+	
+	
+	public TeachingLoad(){
+		super();
+
+	}
 
 	/**
 	 * @return the subjects

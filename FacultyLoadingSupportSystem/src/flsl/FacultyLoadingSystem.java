@@ -1,11 +1,9 @@
 package flsl;
 
-import java.util.ArrayList;
-
 public class FacultyLoadingSystem {
 	
 	private String name;
-	private ArrayList<Course> courseList;
+	private SubjectOfferings courseList;
 	
 	/**
 	 * @return the name
@@ -22,17 +20,35 @@ public class FacultyLoadingSystem {
 	/**
 	 * @return the courseList
 	 */
-	public ArrayList<Course> getCourseList() {
+	public SubjectOfferings getCourseList() {
 		return courseList;
 	}
 	/**
 	 * @param courseList the courseList to set
 	 */
-	public void setCourseList(ArrayList<Course> courseList) {
+	public void setCourseList(SubjectOfferings courseList) {
 		this.courseList = courseList;
 	}
 	
+	/*
+	 * 
+	 * 
+	 */
+	public boolean uploadCourseList(SubjectOfferings courseList) {
+		if( courseList==null )			
+			return false;
+		
+		this.courseList = courseList;
+		return true;
+	}
 	
+	/*
+	 * 
+	 */
+	
+	public SubjectOfferings accessCourseList() {
+		return this.getCourseList();
+	}	
 
 	
 }

@@ -2,43 +2,30 @@ package flsl;
 
 import java.util.ArrayList;
 
-public class Course {
-	private String id;
+public class SubjectOfferings {
+	private int id;
 	private String specialization;
-	private String courseTitle;
 	private ArrayList<Subject> subjects;
 	
-	
-	public Course(String id,String courseTitle, String specialization) {		
-		this.id = id;
-		this.courseTitle = courseTitle;
-		this.specialization = specialization;
-	}
-	/**
-	 * @return the courseTitle
-	 */
-	public String getCourseTitle() {
-		return courseTitle;
-	}
-
-	/**
-	 * @param courseTitle the courseTitle to set
-	 */
-	public void setCourseTitle(String courseTitle) {
-		this.courseTitle = courseTitle;
-	}	
 	/**
 	 * @return the id
 	 */
-	public String getId() {
+	public int getId() {
 		return id;
 	}
+
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
+	
+	public SubjectOfferings(int id,String specialization) {		
+		this.specialization = specialization;
+		this.subjects = new ArrayList<Subject>();
+	}
+
 	/**
 	 * @return the specialization
 	 */
@@ -66,6 +53,13 @@ public class Course {
 		if( !isConflict(subject) )
 			this.subjects.add(subject);
 	}
+	
+	/*
+	 * 
+	 */
+	public ArrayList<Subject> getCourseList(){
+		return this.subjects;
+	}
 
 	// Check if time of all subjects are conflict with the new subject, before adding
 	public boolean isConflict(Subject newSubject){
@@ -88,25 +82,22 @@ public class Course {
 				before.end.getTime() > toCheck.end.getTime()); 
 	}
 	
+	
+	
 	/**
 	 * @param args
 	 */
-	/*
-	 * SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm");
-	 * Date before = sdf.parse("07/05/2017 08:00");
-	 * Date after = sdf.parse("07/05/2017 08:30");
-	 * Date toCheck = sdf.parse("07/05/2017 08:15");
-	 */
+
 	public static void main(String[] args) {
-		Course c = new Course("CS123","BSCS","Networking");
-		
-		Schedule before = new Schedule("07/05/2012 08:00","07/05/2012 08:30");		
-		Schedule toCheck = new Schedule("07/05/2012 08:15", "07/05/2012 08:20");
-		
-		String outs = c.isSameTime(before, toCheck) ? "Yes": "No";
-		System.out.println("Is Same Schedule: "+ outs);
-		outs = c.isBetween(before, toCheck) ? "Yes": "No";
-		System.out.println("Is Schedule overlaps: "+ outs);
+//		SubjectOfferings c = new SubjectOfferings(1,"Networking");
+//		
+//		Schedule before = new Schedule("Monday", "08:00","08:30");		
+//		Schedule toCheck = new Schedule("Monday", "08:15", "08:20");
+//		
+//		String outs = c.isSameTime(before, toCheck) ? "Yes": "No";
+//		System.out.println("Is Same Schedule: "+ outs);
+//		outs = c.isBetween(before, toCheck) ? "Yes": "No";
+//		System.out.println("Is Schedule overlaps: "+ outs);
 		
 		
 	}

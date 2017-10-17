@@ -2,6 +2,7 @@ package flsl;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 /*
@@ -13,9 +14,10 @@ import java.util.Date;
 public class Schedule {
 	Date start;
 	Date end;
+	ArrayList<String> days;
 	
-	public Schedule(String start, String end){
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm");
+	public Schedule(String day, String start, String end){
+		SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
 		try {
 			this.start = sdf.parse(start);
 		} catch (ParseException e) {
@@ -31,6 +33,23 @@ public class Schedule {
 	}
 
 	
+	/**
+	 * @return the day
+	 */
+	public ArrayList<String> getDays() {
+		return days;
+	}
+
+
+	/**
+	 * @param day the day to set
+	 */
+	public void addDay(String day) {
+		this.days.add(day);
+	}
+
+
+
 	/**
 	 * @return the start
 	 */

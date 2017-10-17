@@ -1,9 +1,7 @@
 package flsl;
 
-import java.util.ArrayList;
-
 public class AcademicProgramOfficer extends Employee {
-	private ArrayList<Course> courseList;
+	private SubjectOfferings subjectList;
 	
 	public AcademicProgramOfficer(String name, String id){
 		super(name,id);
@@ -11,20 +9,22 @@ public class AcademicProgramOfficer extends Employee {
 	/**
 	 * @return the courseList
 	 */
-	public ArrayList<Course> getCourseList() {
-		return courseList;
+	public SubjectOfferings getCourseList() {
+		return subjectList;
 	}
 
 	/**
 	 * @param courseList the courseList to set
 	 */
-	public void setCourseList(ArrayList<Course> courseList) {
-		this.courseList = courseList;
+	public void setCourseList(SubjectOfferings courseList) {
+		this.subjectList = courseList;
 	}
-	
-	public void addCourse(Course course){
-		this.courseList.add(course);
+	@Override
+	public boolean canEditSubjects() {
+		// TODO Auto-generated method stub
+		return true;
 	}
+
 		
 	
 }
