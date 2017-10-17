@@ -2,13 +2,12 @@ package flsl;
 
 import java.util.ArrayList;
 
-public class AcademicProgramOfficer extends Person {
+public class AcademicProgramOfficer extends Employee {
 	private ArrayList<Course> courseList;
 	
-	public AcademicProgramOfficer(){
-		
+	public AcademicProgramOfficer(String name, String id){
+		super(name,id);
 	}
-
 	/**
 	 * @return the courseList
 	 */

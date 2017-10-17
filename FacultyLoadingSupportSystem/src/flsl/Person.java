@@ -1,6 +1,10 @@
 package flsl;
 
 public class Person {
+	public Person(String name) {
+		this.name = name;
+	}
+
 	String name;
 
 	/**
@@ -16,5 +20,4 @@ public class Person {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
 }
