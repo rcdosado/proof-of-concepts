@@ -1,9 +1,25 @@
 package flsl;
 
+import java.util.ArrayList;
+
 public class Room {
 	String name;
-	int capacity;	
+	int capacity;
+	ArrayList<Schedule> schedules;
 	
+	/**
+	 * @return the schedules
+	 */
+	public ArrayList<Schedule> getSchedules() {
+		return schedules;
+	}
+	/**
+	 * @param schedules the schedules to set
+	 */
+	public void addSchedule(Schedule schedule) {
+		
+		this.schedules.add(schedule);
+	}
 	/**
 	 * @return the name
 	 */

@@ -41,7 +41,7 @@ public abstract class Employee extends Person{
 	public void addLoad(Load load){
 		this.loads.add(load);
 	}
-	
+	public abstract boolean canReadSubjects();
 	public abstract boolean canEditSubjects();
 
 }

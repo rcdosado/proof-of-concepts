@@ -26,6 +26,11 @@ public class Faculty extends Employee{
 		// TODO Auto-generated method stub
 		return false;
 	}
+	@Override
+	public boolean canReadSubjects() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
 
 	

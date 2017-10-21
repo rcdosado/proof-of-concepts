@@ -29,6 +29,11 @@ public class ViceChairman extends Employee {
 		// TODO Auto-generated method stub
 		return true;
 	}
+	@Override
+	public boolean canReadSubjects() {
+		// TODO Auto-generated method stub
+		return true;
+	}
 
 
 
