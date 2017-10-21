@@ -1,4 +1,5 @@
 package flsl;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -89,9 +90,27 @@ public class Main {
 		/*
 		 * APO will indicate the rooms where every classes will be held.
 		 */
+
+		Room mtc1 = new Room("MTC1", 25, RoomType.LABORATORY);
+		Room cl5 = new Room("CL5", 25, RoomType.LECTURE);
+		
+		SubjectOfferings offerings = apo.getCourseList();
+		Subject _subj1 = offerings.getSubjects().get(0);
+		Subject _subj2 = offerings.getSubjects().get(1);
+		
+		if( !mtc1.addSubject(_subj1) ){
+			System.out.println("Cannot add this subject, there is a schedule conflict");
+			return;
+		}
+		if( !cl5.addSubject(_subj2) ){
+			System.out.println("Cannot add this subject, there is a schedule conflict");
+			return;
+		}		
 		
 		
-									
+		
+					
+		
 
 	}
 
