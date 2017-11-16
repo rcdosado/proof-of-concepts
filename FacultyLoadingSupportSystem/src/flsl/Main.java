@@ -107,9 +107,19 @@ public class Main {
 			return;
 		}		
 		
+		ArrayList<Room> rooms = new ArrayList<Room>();
+		rooms.add(mtc1);
+		rooms.add(cl5);
 		
+		rooms.forEach((room) -> {
+			
+			System.out.println(room.getName());
+			room.getSchedules().forEach((sched)->{
+				System.out.println("Schedules for this room:" + sched.toString());
+			});
+		});
+			
 		
-					
 		
 
 	}

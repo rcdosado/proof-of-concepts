@@ -2,10 +2,12 @@ package oop;
 
 public class Charmander extends Pokemon {
 
+
 	@Override
-	public void evolve() {
-		System.out.println("I am Charmander");
+	public void evolve(Pokemon p) {
+		// TODO Auto-generated method stub
 		
 	}
+
 
 }

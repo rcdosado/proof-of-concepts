@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FacultyLoadingSupportSystem/FacultyLoadingSupportSystem.iml" filepath="$PROJECT_DIR$/FacultyLoadingSupportSystem/FacultyLoadingSupportSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GuessingGame/GuessingGame.iml" filepath="$PROJECT_DIR$/GuessingGame/GuessingGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pokeverse/Pokeverse.iml" filepath="$PROJECT_DIR$/Pokeverse/Pokeverse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/proof-of-concepts.iml" filepath="$PROJECT_DIR$/proof-of-concepts.iml" />
+    </modules>
+  </component>
+</project>
+

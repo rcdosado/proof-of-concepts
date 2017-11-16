@@ -109,6 +109,7 @@ public abstract class Pokemon {
 		this.experience = experience;
 	}
 	
-	public abstract void evolve();
+	public abstract void evolve(Pokemon p);
+	
 
 }

@@ -12,6 +12,7 @@ import java.util.Date;
  */
 
 public class Schedule {
+
 	Date start;
 	Date end;
 	ArrayList<String> days;
@@ -77,6 +78,14 @@ public class Schedule {
 	public void setEnd(Date end) {
 		this.end = end;
 	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Schedule [start=" + start + ", end=" + end + ", days=" + days + "]";
+	}
+	
 	/*
 	 * SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm");
 	 * Date before = sdf.parse("07/05/2012 08:00");
